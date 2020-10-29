@@ -7,11 +7,12 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1>SUPERHEROES!</h1>
+  <img src="{{ superheroImage }}">
+  <form [formGroup]="form" (ngSubmit)="getSuperHeroImage(form)">
+    <p>SuperHero id:  <input type="number" id="superid" formControlName="superhero"></p>
+    <button type="submit">Buscar</button>
+    {{superhero}}
+  </form>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
